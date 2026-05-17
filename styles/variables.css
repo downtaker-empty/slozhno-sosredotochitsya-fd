@@ -4,9 +4,10 @@
 */
 :root {
   --bg-image: url('../images/cover-image.png');
-  --main-title-color: #DB00FF;
-  --accent-color: #FF0070;
-  --title-color: #000028;
-  --text-color: #F1B2CE;
+  --color-primary: #DB00FF;
+  --color-accent: #FF0070;
+  --color-title: #000028;
+  --color-text: #F1B2CE;
   --fs-text: 18px;
+  --font-family-text: "IBM Plex Mono", "JetBrains Mono", monospace;
 }
