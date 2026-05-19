@@ -17,7 +17,9 @@ p {
 }
 
 header {
-  grid-row-start: 1;
+  block-size: 100vh;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
 }
 
 .header__theme-menu {
@@ -48,14 +50,14 @@ header {
   line-height: 83%;
   color:var(--color-primary);
   text-shadow: 4px 4px var(--color-accent);
-  align-self: center;
+  align-items: center;
 }
 
 .header-text {
   inline-size: 50%;
   margin-right: 20px;
   justify-self: end;
-  align-self: end;
+  align-self: start;
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
   font-weight: 700;
@@ -93,12 +95,10 @@ main .section.alter .section-title {
 }
 
 .section__content {
-  grid-column-start: 2;
   grid-column: 2 / 4;
 }
 
 main .section.alter .section__content {
-  grid-column-start: auto;
   grid-column: auto;
 }
 
@@ -120,6 +120,7 @@ main .section.alter .section__content {
  @media (width<=768px){
     .header__theme-menu { 
       justify-self: self-end;
+      align-self: center;
     }
     
     .header__theme-menu-list {
