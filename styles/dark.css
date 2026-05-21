@@ -11,10 +11,10 @@
   --color-title: #FF0070;
   --color-text: #F1B2CE;
   --color-hover:#FF007066;
-  --bg-image: url('../images/cover-image-dark.png')
+  --bg-image: url('../images/cover-image-dark.png');
 }
 
-.theme-dark .page .header .rec-badge{
+.theme-dark .page .header .rec-badge {
   position: absolute;
   font-size: 18px;
   color: var(--color-accent);
@@ -24,7 +24,7 @@
   display: block;
 }
 
-.theme-dark .page .header .rec-badge::after{
+.theme-dark .page .header .rec-badge::after {
   content: '•';
   font-size: 1.8em;
   line-height: 1;

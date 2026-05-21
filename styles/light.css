@@ -11,13 +11,13 @@
   --color-title: #353430;
   --color-text: #353430;
   --color-hover: #353430;
-  --bg-image: url('../images/cover-image-light.png')
+  --bg-image: url('../images/cover-image-light.png');
 }
 
-.theme-light .page .header .rec-badge{
+.theme-light .page .header .rec-badge {
   display: none;
 }
 
-.theme-light .page .header .rec-badge::after{
+.theme-light .page .header .rec-badge::after {
   display: none;
 }
