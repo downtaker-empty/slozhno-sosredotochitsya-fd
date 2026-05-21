@@ -2,14 +2,14 @@
 
 .page {
   background-image: var(--bg-image);
+  background-color: var(--bg-color);
   background-position: center;      
   background-size: cover;           
   background-attachment: fixed;       
-  background-color: var(--bg-color);
   display: grid;
   grid-template-rows: repeat(auto-fit, 1fr);
   gap: 60px;
-
+  position: relative;
 }
 
 p {
@@ -17,11 +17,89 @@ p {
   margin-block-end: 0;
 }
 
+ul {
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+
+.rec-badge {
+  position: absolute;
+  font-size: 18px;
+  color: var(--color-accent);
+  align-self: start;
+  justify-self: end;
+  margin-right: 30px;
+}
+
+.rec-badge::after {
+  content: '•';
+  font-size: 1.8em;
+  line-height: 1;
+}
+
+header::after,
+header::before,
+footer::after,
+footer::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+header::after, 
+footer::after {
+  top: 0;
+  right: 0;
+  border-top: 1px solid var(--color-accent);
+  border-right: 1px solid var(--color-accent);
+  margin-right: 20px;
+}
+
+header::before, 
+footer::before {
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid var(--color-accent);
+  border-left: 1px solid var(--color-accent);
+  margin-left: 20px;
+}
+
+
+header::after {
+  position: absolute;
+  content: '';
+  background-color: inherit;
+  width: 25px;
+  height: 25px;
+  top: 0px;
+  right: 0px;
+  border-top: 1px solid var(--color-accent);
+  border-right: 1px solid var(--color-accent);
+}
+
+header::before {
+  position: absolute;
+  content: '';
+  background-color: inherit;
+  width: 25px;
+  height: 25px;
+  bottom: 0px;
+  left: 0px;
+  border-bottom: 1px solid var(--color-accent);
+  border-left: 1px solid var(--color-accent);
+  margin-left: 20px;
+}
+
+
 header {
+  position: relative;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   min-block-size: 768px;
   max-block-size: 100vh;
+  margin: 20px 0px 0px 0px;
 }
 
 .header__theme-menu {
@@ -57,16 +135,16 @@ header {
 
 .header-text {
   inline-size: 50%;
-  margin-right: 20px;
   justify-self: end;
   align-self: start;
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
   font-weight: 700;
   line-height: 23.4px;
+  margin-right: 20px;
 }
 
-.color-block {
+.accent-block {
   background-color: var(--color-accent);
   color: var(--color-title);
 }
@@ -75,12 +153,12 @@ main {
   display: flex;
   flex-direction: column;
   gap:80px;
+  padding: 0px 20px;
 }
 
 main .section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 0px 20px;
   gap: 20px;
   align-items: start; 
   grid-auto-rows: auto;
@@ -92,9 +170,8 @@ main .section {
   color: var(--color-accent);
   font-size: var(--fs-text);
   font-weight: 700;
-  text-wrap: wrap;
   line-height: 23.4px;
-  text-align: left;
+  overflow-wrap: break-word;
 }
 
 main .section.alter .section-title {
@@ -122,10 +199,6 @@ main .section.alter .section__content {
   font-weight: 400;
 }
 
-.section__content-title + .section__content-text{
-  padding-top: 10px;
- }
-
 .section.pictures {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: min-content repeat(3, 1fr) auto;
@@ -149,29 +222,29 @@ main .section.pictures .section__content-title {
   grid-column: 1 / -1;
 }
 
-.section__picture-hor {
+.section__picture-wide {
   grid-column: span 2;
 }
 
-.section__picture-ver {
+.section__picture-tall {
   grid-row: span 2;
 }
 
-.section__picture-ver2 {
+.section__picture-tall-xl {
   grid-row: span 3;
 }
 
 footer {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* центрирование по вертикали */
+  justify-content: center;
   align-items: center;
   min-block-size: 768px;
   max-block-size: 100vh;
-
+  position: relative;
 }
 
- @media (width<=768px){
+ @media (width<=768px) {
     .header__theme-menu { 
       justify-self: self-end;
       align-self: center;
@@ -185,22 +258,6 @@ footer {
       grid-column: 1 / -1;
     }
  }
-
- @media (width<=768px){
-  .header__theme-menu { 
-    justify-self: self-end;
-    align-self: center;
-  }
-  
-  .header__theme-menu-list {
-    flex-direction: column;
-  }
-
-  main .section.alter .section__content {
-    grid-column: 1 / -1;
-  }
-}
-
 
 @media (width<=375px) {
 
@@ -222,10 +279,10 @@ footer {
   }
 
   .section.pictures {
-     grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
-  .section__picture-hor {
-  grid-column: auto;
+  .section__picture-wide {
+    grid-column: auto;
   }
 }
