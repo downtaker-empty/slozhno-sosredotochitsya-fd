@@ -4,8 +4,8 @@
   background-image: var(--bg-image);
   background-color: var(--bg-color);
   background-position: center;
-  background-size: cover;    
-  background-attachment: fixed;   
+  background-size: cover;
+  background-attachment: fixed;
   display: grid;
   grid-template-rows: repeat(auto-fit, 1fr);
   gap: 60px;
