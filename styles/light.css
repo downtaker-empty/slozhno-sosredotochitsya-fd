@@ -21,3 +21,13 @@
 .theme-light .page .header .rec-badge::after {
   display: none;
 }
+
+@media (prefers-color-scheme: light) {
+  .rec-badge {
+    display: none;
+  }
+
+  .rec-badge::after {
+    display: none;
+  }
+}
