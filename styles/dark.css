@@ -41,7 +41,7 @@
   display: block;
   }
 
-  .rec-badge::after{
+  .rec-badge::after {
   content: '•';
   font-size: 1.8em;
   line-height: 1;

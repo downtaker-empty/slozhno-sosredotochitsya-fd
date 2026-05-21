@@ -3,9 +3,9 @@
 .page {
   background-image: var(--bg-image);
   background-color: var(--bg-color);
-  background-position: center;     
-  background-size: cover;        
-  background-attachment: fixed;     
+  background-position: center;
+  background-size: cover;    
+  background-attachment: fixed;   
   display: grid;
   grid-template-rows: repeat(auto-fit, 1fr);
   gap: 60px;
@@ -133,7 +133,7 @@ main .section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  align-items: start; 
+  align-items: start;
   grid-auto-rows: auto;
   
 }
@@ -218,7 +218,7 @@ footer {
 }
 
 @media (width<=768px) {
-    .header__theme-menu { 
+    .header__theme-menu {
       justify-self: self-end;
       align-self: center;
     }
