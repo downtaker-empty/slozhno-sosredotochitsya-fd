@@ -103,6 +103,7 @@ header {
   line-height: 83%;
   color:var(--color-primary);
   text-shadow: 4px 4px var(--color-accent);
+  font-family: var(--font-family-text);
   align-items: center;
 }
 
@@ -141,6 +142,7 @@ main .section {
 .section-title {
   grid-row: 1/3;
   color: var(--color-title);
+  font-family: var(--font-family-text);
   font-size: var(--fs-text);
   font-weight: 700;
   line-height: 23.4px;
@@ -163,12 +165,14 @@ main .section.alter .section__content {
 
 .section__content-title {
   font-size: var(--fs-text);
+  font-family: var(--font-family-text);
   font-weight: 700;
 }
 
 .section__content-text {
   color: var(--color-text);
   font-size: var(--fs-text);
+  font-family: var(--font-family-text);
   font-weight: 400;
 }
 
