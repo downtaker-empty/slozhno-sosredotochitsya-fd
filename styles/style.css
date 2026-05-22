@@ -185,7 +185,7 @@ main .section.alter .section__content {
 }
 
 .section__content-title + .section__content-text {
-  padding-top: 10px;
+  margin-top: 10px;
 }
 
 .section.pictures {
@@ -241,7 +241,7 @@ footer {
 
   .header__theme-menu {
     justify-self: self-end;
-    align-self: end;
+    align-self: center;
   }
   
   .header__theme-menu-list {
@@ -295,6 +295,7 @@ footer {
 
   .section.pictures {
     grid-template-columns: 1fr;
+    gap:10px;
   }
 
   .section__picture-wide {
@@ -312,10 +313,6 @@ footer {
   footer::before {
     left: 10px;
     bottom: 10px;
-  }
-
-  .section.pictures {
-    gap:10px;
   }
 
   footer {
