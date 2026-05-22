@@ -168,6 +168,9 @@ main .section.alter .section__content {
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
   font-weight: 700;
+  text-align: left;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .section__content-text {
@@ -176,6 +179,9 @@ main .section.alter .section__content {
   font-family: var(--font-family-text);
   font-weight: 400;
   line-height: 23.4px;
+  text-align: left;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .section__content-title + .section__content-text {
@@ -283,6 +289,10 @@ footer {
     grid-column: 1 / -1;
   }
 
+  .tips .section__content-title {
+    font-weight: 400;
+  }
+
   .section.pictures {
     grid-template-columns: 1fr;
   }
@@ -302,6 +312,10 @@ footer {
   footer::before {
     left: 10px;
     bottom: 10px;
+  }
+
+  .section.pictures {
+    gap:10px;
   }
 
   footer {
