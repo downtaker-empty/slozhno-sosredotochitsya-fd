@@ -111,7 +111,7 @@ header {
 
 .header-text {
   inline-size: 50%;
-  align-self: start;
+  align-self: center;
   justify-self: end;
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
