@@ -111,13 +111,12 @@ header {
 
 .header-text {
   inline-size: 50%;
-  align-self: start;        /* прижимаем к низу ячейки */
+  align-self: center;        /* прижимаем к низу ячейки */
   justify-self: end;
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
   font-weight: 700;
   line-height: 23.4px;
-  margin-right: 20px;
 }
 
 .accent-block {
@@ -176,6 +175,10 @@ main .section.alter .section__content {
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
   font-weight: 400;
+}
+
+.section__content-title + .section__content-text {
+  padding-top: 10px;
 }
 
 .section.pictures {
