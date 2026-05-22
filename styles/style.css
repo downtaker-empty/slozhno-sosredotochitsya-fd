@@ -246,7 +246,7 @@ footer {
     grid-column: 1 / -1;
   }
 
-  .footer {
+  footer {
     min-block-size: 1024px;
   }
 }
@@ -304,7 +304,7 @@ footer {
     bottom: 10px;
   }
 
-  .footer {
+  footer {
       min-block-size: 668px;
   }
 }
