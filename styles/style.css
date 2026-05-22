@@ -60,7 +60,7 @@ header {
   position: relative;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  min-block-size: 768px;
+  min-block-size: 718px;
   max-block-size: 100vh;
   margin: 20px 0px 0px 0px;
 }

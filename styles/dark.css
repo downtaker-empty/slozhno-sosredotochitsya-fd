@@ -32,9 +32,9 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root{
+  :root {
     --color-primary: #DB00FF;
-    --color-accent: #FF0070;
+    --color-accent: #FF0070; 
     --color-argc: #000028;
     --color-title: #FF0070;
     --color-text: #F1B2CE;
@@ -42,7 +42,7 @@
     --bg-image: url('../images/cover-image-dark.png');
     --bg-color: #000028;
   }
-  
+
   .rec-badge {
   position: absolute;
   font-size: 18px;
