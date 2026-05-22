@@ -97,6 +97,8 @@ header {
 }
 
 .header-title {
+  align-self: center;     /* центр второго ряда */
+  justify-self: start;
   font-size: var(--fs-title);
   font-weight: 700;
   line-height: 83%;
@@ -108,8 +110,8 @@ header {
 
 .header-text {
   inline-size: 50%;
+  align-self: center;        /* прижимаем к низу ячейки */
   justify-self: end;
-  align-self: start;
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
   font-weight: 700;
@@ -126,7 +128,7 @@ main {
   display: flex;
   flex-direction: column;
   gap:80px;
-  padding: 0px auto;
+  padding: 0px 20px;
 }
 
 main .section {
@@ -239,6 +241,7 @@ footer {
 
   main {
     gap: 50px;
+    padding: 0px 10px;
   }
 
   .page {
