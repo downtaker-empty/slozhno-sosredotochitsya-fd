@@ -21,7 +21,8 @@
   color: var(--color-accent);
   align-self: start;
   justify-self: end;
-  margin-right: 30px;
+  top: 20px;
+  right: 10px;
   display: block;
 }
 
@@ -34,7 +35,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: #DB00FF;
-    --color-accent: #FF0070; 
+    --color-accent: #FF0070;
     --color-argc: #000028;
     --color-title: #FF0070;
     --color-text: #F1B2CE;

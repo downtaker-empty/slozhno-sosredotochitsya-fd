@@ -12,6 +12,7 @@
   grid-template-rows: repeat(auto-fit, 1fr);
   gap: 60px;
   position: relative;
+  max-inline-size: 1024px;
 }
 
 a {
@@ -40,29 +41,27 @@ footer::before {
 
 header::after, 
 footer::after {
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
   border-top: 1px solid var(--color-accent);
   border-right: 1px solid var(--color-accent);
-  margin-right: 20px;
 }
 
 header::before, 
 footer::before {
-  bottom: 0;
-  left: 0;
+  bottom: 20px;
+  left: 20px;
   border-bottom: 1px solid var(--color-accent);
   border-left: 1px solid var(--color-accent);
-  margin-left: 20px;
 }
 
 header {
   position: relative;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  min-block-size: 718px;
+  min-block-size: 768px;
   max-block-size: 100vh;
-  margin: 20px 0px 0px 0px;
+  padding: 20px 20px 0px 0px;
 }
 
 .header__theme-menu {
