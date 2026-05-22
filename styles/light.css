@@ -24,6 +24,18 @@
 }
 
 @media (prefers-color-scheme: light) {
+
+  :root {
+  --color-primary: #FFC2E6;
+  --color-accent: #FF8DCB;
+  --color-argc:  #353430;
+  --color-title: #353430;
+  --color-text: #353430;
+  --color-hover: #353430;
+  --bg-image: url('../images/cover-image-light.png');
+  --bg-color: #FF8DCB;
+}
+
   .rec-badge {
     display: none;
   }

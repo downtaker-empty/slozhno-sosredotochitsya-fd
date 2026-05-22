@@ -43,16 +43,16 @@ header::after,
 footer::after {
   top: 20px;
   right: 20px;
-  border-top: 1px solid var(--color-accent);
-  border-right: 1px solid var(--color-accent);
+  border-top: 1px solid var(--color-title);
+  border-right: 1px solid var(--color-title);
 }
 
 header::before, 
 footer::before {
   bottom: 20px;
   left: 20px;
-  border-bottom: 1px solid var(--color-accent);
-  border-left: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-title);
+  border-left: 1px solid var(--color-title);
 }
 
 header {
@@ -228,9 +228,14 @@ footer {
 }
 
 @media (width<=768px) {
+
+    .header {
+      min-block-size: 1024px;
+    }
+
     .header__theme-menu {
       justify-self: self-end;
-      align-self: center;
+      align-self: end;
     }
     
     .header__theme-menu-list {
