@@ -254,13 +254,17 @@ footer {
     padding: 0px 10px;
   }
 
+   .header {
+      min-block-size: 668px;
+    }
+
   .page {
     gap: 40px;
   }
 
   .header-text {
     inline-size: 100%;
-    margin: 0px auto;
+    margin-left: 10px;
   }
 
   .section-title {
@@ -286,11 +290,13 @@ footer {
 
   header::after, 
   footer::after {
-    margin-right: 10px;
+    top: 10px;
+    right: 10px;
   }
 
   header::before, 
   footer::before {
-    margin-left: 10px;
+    left: 10px;
+    bottom: 10px;
   }
 }
