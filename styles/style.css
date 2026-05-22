@@ -180,13 +180,16 @@ main .section.alter .section__content {
   font-weight: 400;
   line-height: 23.4px;
   text-align: left;
-  white-space: normal;
-  word-wrap: break-word;
+  text-wrap: wrap;
 }
 
 .section__content-title + .section__content-text {
   margin-top: 10px;
 }
+
+  .tips .section__content-title {
+    font-weight: 400;
+  }
 
 .section.pictures {
   grid-template-columns: repeat(3, 1fr);
@@ -287,10 +290,6 @@ footer {
 
   main .section .section__content {
     grid-column: 1 / -1;
-  }
-
-  .tips .section__content-title {
-    font-weight: 400;
   }
 
   .section.pictures {
