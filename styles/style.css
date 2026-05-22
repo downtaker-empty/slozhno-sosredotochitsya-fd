@@ -98,7 +98,7 @@ header {
 }
 
 .header-title {
-  align-self: center;     /* центр второго ряда */
+  align-self: center;
   justify-self: start;
   font-size: var(--fs-title);
   font-weight: 700;
@@ -111,7 +111,7 @@ header {
 
 .header-text {
   inline-size: 50%;
-  align-self: center;        /* прижимаем к низу ячейки */
+  align-self: start;
   justify-self: end;
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
@@ -175,6 +175,7 @@ main .section.alter .section__content {
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
   font-weight: 400;
+  line-height: 23.4px;
 }
 
 .section__content-title + .section__content-text {
