@@ -57,7 +57,7 @@ footer::before {
 header {
   position: relative;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
   min-block-size: 768px;
   max-block-size: 100vh;
   margin: 20px 0px 0px 0px;
@@ -110,7 +110,7 @@ header {
 
 .header-text {
   inline-size: 50%;
-  align-self: center;        /* прижимаем к низу ячейки */
+  align-self: start;        /* прижимаем к низу ячейки */
   justify-self: end;
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
