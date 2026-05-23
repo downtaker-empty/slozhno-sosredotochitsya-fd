@@ -26,11 +26,15 @@ a:hover {
 
 a:focus {
   outline: none;
+}
+
+a:focus-visible {
   border: 1px solid var(--color-text);
 }
 
-.header::after,
-.header::before,
+
+.decorated-zone::after,
+.decorated-zone::before,
 .footer::after,
 .footer::before {
   content: '';
@@ -39,7 +43,7 @@ a:focus {
   height: 25px;
 }
 
-.header::after, 
+.decorated-zone::after, 
 .footer::after {
   top: 20px;
   right: 20px;
@@ -47,7 +51,7 @@ a:focus {
   border-right: 1px solid var(--color-title);
 }
 
-.header::before, 
+.decorated-zone::before, 
 .footer::before {
   bottom: 20px;
   left: 20px;
@@ -59,10 +63,11 @@ a:focus {
   position: absolute;
   font-size: 18px;
   color: var(--color-accent);
+  font-size: var(--font-family-text);
   align-self: start;
   justify-self: end;
   top: 20px;
-  right: 10px;
+  right: 0px;
   display: none;
 }
 
@@ -100,6 +105,7 @@ a:focus {
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
   padding: 1.5px 13px;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
@@ -108,6 +114,9 @@ a:focus {
 
 .header__theme-menu-button:focus {
   outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--color-title);
 }
 
