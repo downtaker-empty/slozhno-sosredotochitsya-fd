@@ -63,7 +63,7 @@ a:focus-visible {
   position: absolute;
   font-size: 18px;
   color: var(--color-accent);
-  font-size: var(--font-family-text);
+  font-family: var(--font-family-text);
   align-self: start;
   justify-self: end;
   top: 20px;
