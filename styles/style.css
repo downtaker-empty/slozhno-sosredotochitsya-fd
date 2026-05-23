@@ -80,6 +80,7 @@ header {
   border: initial;
   color: var(--color-title);
   font-size: var(--fs-text);
+  font-family: var(--font-family-text);
   padding: auto auto;
 }
 
