@@ -21,41 +21,58 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--color-text);
 }
 
-a:focus-within {
+a:focus {
   outline: none;
   border: 1px solid var(--color-text);
 }
 
-header::after,
-header::before,
-footer::after,
-footer::before {
+.header::after,
+.header::before,
+.footer::after,
+.footer::before {
   content: '';
   position: absolute;
   width: 25px;
   height: 25px;
 }
 
-header::after, 
-footer::after {
+.header::after, 
+.footer::after {
   top: 20px;
   right: 20px;
   border-top: 1px solid var(--color-title);
   border-right: 1px solid var(--color-title);
 }
 
-header::before, 
-footer::before {
+.header::before, 
+.footer::before {
   bottom: 20px;
   left: 20px;
   border-bottom: 1px solid var(--color-title);
   border-left: 1px solid var(--color-title);
 }
 
-header {
+.rec-badge {
+  position: absolute;
+  font-size: 18px;
+  color: var(--color-accent);
+  align-self: start;
+  justify-self: end;
+  top: 20px;
+  right: 10px;
+  display: none;
+}
+
+.rec-badge::after {
+  content: '•';
+  font-size: 1.8em;
+  line-height: 1;
+}
+
+.header {
   position: relative;
   display: grid;
   grid-template-rows: repeat(3, auto);
@@ -89,7 +106,7 @@ header {
   border: 1px solid var(--color-hover);
 }
 
-.header__theme-menu-button:focus-within {
+.header__theme-menu-button:focus {
   outline: none;
   border-bottom: 1px solid var(--color-title);
 }
@@ -133,7 +150,7 @@ main {
   padding: 0px 20px;
 }
 
-main .section {
+section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -148,10 +165,9 @@ main .section {
   font-size: var(--fs-text);
   font-weight: 700;
   line-height: 23.4px;
-  overflow-wrap: break-word;
 }
 
-main .section.alter .section-title {
+.section.alter .section-title {
   grid-column: 1 / -1;
   inline-size: 30%;
 }
@@ -161,7 +177,7 @@ main .section.alter .section-title {
   align-self: start;
 }
 
-main .section.alter .section__content {
+.section.alter .section__content {
   grid-column: auto;
 }
 
@@ -188,9 +204,9 @@ main .section.alter .section__content {
   margin-top: 10px;
 }
 
-  .tips .section__content-title {
-    font-weight: 400;
-  }
+.tips .section__content-title {
+  font-weight: 400;
+}
 
 .section.pictures {
   grid-template-columns: repeat(3, 1fr);
@@ -207,11 +223,11 @@ main .section.alter .section__content {
   object-fit:contain;
 }
 
-main .section.pictures .section__content {
+.section.pictures .section__content {
   grid-column: 1 / -1;
 }
 
-main .section.pictures .section__content-title {
+.section.pictures .section__content-title {
   grid-column: 1 / -1;
 }
 
@@ -227,7 +243,7 @@ main .section.pictures .section__content-title {
   grid-row: span 3;
 }
 
-footer {
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -239,7 +255,7 @@ footer {
 
 @media (width<=768px) {
 
-  header {
+  .header {
     min-block-size: 1024px;
   }
 
@@ -252,16 +268,16 @@ footer {
     flex-direction: column;
   }
 
-  main .section {
+  .section {
     grid-template-columns: 236px repeat(2, 226px);
   }
 
 
-  main .section.alter .section__content {
+  .section.alter .section__content {
     grid-column: 1 / -1;
   }
 
-  footer {
+  .footer {
     min-block-size: 1024px;
   }
 }
@@ -273,12 +289,12 @@ footer {
     padding: 0px 10px;
   }
 
-  header {
+  .header {
     min-block-size: 668px;
     padding: 0px 10px;
   }
 
-  main .section {
+  .section {
     grid-template-columns: repeat(3, 1fr);
     max-inline-size: 355px;
   }
@@ -296,11 +312,11 @@ footer {
     grid-column: 1 / -1;
   }
 
-  main .section.alter .section-title {
+  .section.alter .section-title {
     inline-size: 100%;
   }
 
-  main .section .section__content {
+  .section .section__content {
     grid-column: 1 / -1;
   }
 
@@ -314,19 +330,19 @@ footer {
   }
 
 
-  header::after, 
-  footer::after {
+  .header::after, 
+  .footer::after {
     top: 10px;
     right: 10px;
   }
 
-  header::before, 
-  footer::before {
+  .header::before, 
+  .footer::before {
     left: 10px;
     bottom: 10px;
   }
 
-  footer {
+  .footer {
       min-block-size: 668px;
   }
 }

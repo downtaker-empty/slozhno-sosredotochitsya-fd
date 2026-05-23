@@ -15,21 +15,8 @@
   --bg-color: #000028;
 }
 
-.theme-dark .page .header .rec-badge {
-  position: absolute;
-  font-size: 18px;
-  color: var(--color-accent);
-  align-self: start;
-  justify-self: end;
-  top: 20px;
-  right: 10px;
+html.theme-dark .rec-badge {
   display: block;
-}
-
-.theme-dark .page .header .rec-badge::after {
-  content: '•';
-  font-size: 1.8em;
-  line-height: 1;
 }
 
 @media (prefers-color-scheme: dark) {
