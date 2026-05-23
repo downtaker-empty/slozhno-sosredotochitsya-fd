@@ -134,7 +134,7 @@ main {
 
 main .section {
   display: grid;
-  grid-template-columns: repeat(3, minmax(236px,1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   align-items: start;
   grid-auto-rows: auto;
@@ -251,6 +251,11 @@ footer {
     flex-direction: column;
   }
 
+  main .section {
+    grid-template-columns: 236px repeat(2, 226px);
+  }
+
+
   main .section.alter .section__content {
     grid-column: 1 / -1;
   }
@@ -270,6 +275,11 @@ footer {
   header {
     min-block-size: 668px;
     padding: 0px 10px;
+  }
+
+  main .section {
+    grid-template-columns: repeat(3, 1fr);
+    max-inline-size: 355px;
   }
 
   .page {
