@@ -75,7 +75,7 @@ a:focus {
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows:  auto min-content auto;
   min-block-size: 768px;
   max-block-size: 100vh;
   padding: 20px 20px 0px 0px;
@@ -130,7 +130,7 @@ a:focus {
 
 .header-text {
   inline-size: 50%;
-  align-self: start;
+  align-self: center;
   justify-self: end;
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
@@ -261,7 +261,7 @@ section {
 
   .header__theme-menu {
     justify-self: end;
-    align-self: end;
+    align-self: center;
   }
   
   .header__theme-menu-list {
