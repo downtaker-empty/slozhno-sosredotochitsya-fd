@@ -81,7 +81,7 @@ header {
   color: var(--color-title);
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
-  padding: auto auto;
+  padding: 1.5px 13px;
 }
 
 .header__theme-menu-button:hover {
@@ -243,8 +243,8 @@ footer {
   }
 
   .header__theme-menu {
-    justify-self: self-end;
-    align-self: center;
+    justify-self: end;
+    align-self: start;
   }
   
   .header__theme-menu-list {
