@@ -48,8 +48,8 @@
   position: absolute;
   font-size: 18px;
   color: var(--color-accent);
-  align-self: start;
-  justify-self: end;
+  align-self: self-start;
+  justify-self: center;
   margin-right: 30px;
   display: block;
   }
