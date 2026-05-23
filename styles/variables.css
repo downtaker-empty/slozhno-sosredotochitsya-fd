@@ -3,7 +3,7 @@
   и их переопределение под различные устройства
 */
 :root {
-  --fs-text: clamp(0.875rem, 0.8046rem + 0.3521vw, 1.125rem);
+  --fs-text: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   --fs-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --font-family-text: "IBM Plex Mono", "JetBrains Mono", monospace;
 }

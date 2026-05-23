@@ -118,6 +118,7 @@ header {
   font-family: var(--font-family-text);
   font-weight: 700;
   line-height: 23.4px;
+  text-align:ду;
 }
 
 .accent-block {
@@ -134,11 +135,10 @@ main {
 
 main .section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(236px,1fr));
   gap: 20px;
   align-items: start;
   grid-auto-rows: auto;
-  
 }
 
 .section-title {
