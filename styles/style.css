@@ -1,5 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .page {
   background-image: var(--bg-image);
   background-color: var(--bg-color);
@@ -11,6 +15,8 @@
   gap: 60px;
   position: relative;
   max-inline-size: 1024px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 a {
@@ -63,8 +69,8 @@ a:focus-visible {
   font-family: var(--font-family-text);
   align-self: start;
   justify-self: end;
-  top: 20px;
-  right: 0px;
+  top: 10px;
+  right: 20px;
   display: none;
 }
 
@@ -81,6 +87,7 @@ a:focus-visible {
   min-block-size: 768px;
   max-block-size: 100vh;
   padding: 20px 20px 0px 0px;
+  width: 100%;
 }
 
 .header__theme-menu {
@@ -128,7 +135,7 @@ a:focus-visible {
   font-size: var(--fs-title);
   font-weight: 700;
   line-height: 83%;
-  color:var(--color-primary);
+  color: var(--color-primary);
   text-shadow: 4px 4px var(--color-accent);
   font-family: var(--font-family-text);
   align-items: center;
@@ -152,7 +159,7 @@ a:focus-visible {
 main {
   display: flex;
   flex-direction: column;
-  gap:80px;
+  gap: 80px;
   padding: 0px 20px;
 }
 
@@ -171,6 +178,7 @@ section {
   font-size: var(--fs-text);
   font-weight: 700;
   line-height: 23.4px;
+  text-align: left;
 }
 
 .section.alter .section-title {
@@ -191,9 +199,6 @@ section {
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
   font-weight: 700;
-  text-align: left;
-  white-space: normal;
-  word-wrap: break-word;
 }
 
 .section__content-text {
@@ -230,7 +235,7 @@ section {
 }
 
 .section__picture {
-  object-fit:contain;
+  object-fit: contain;
 }
 
 .section.pictures .section__content {
@@ -261,12 +266,16 @@ section {
   min-block-size: 768px;
   max-block-size: 100vh;
   position: relative;
+  width: 100%;
 }
 
-@media (width<=768px) {
+@media (width <= 768px) {
 
   .header {
     min-block-size: 1024px;
+    max-block-size: 100vh;
+    padding: 20px 10px 0 10px;
+    width: 100%;
   }
 
   .header__theme-menu {
@@ -281,8 +290,13 @@ section {
   .section {
     grid-template-columns: 1.05fr 1fr 1fr;
     gap: 20px;
+    width: 100%;
   }
 
+  .section.alter .section-title {
+    grid-column: 1 / -1;
+    inline-size: 100%;
+  }
 
   .section.alter .section__content {
     grid-column: 1 / -1;
@@ -290,10 +304,18 @@ section {
 
   .footer {
     min-block-size: 1024px;
+    max-block-size: 100vh;
+    padding: 20px;
+    width: 100%;
   }
 }
 
 @media (width <= 375px) {
+
+  .rec-badge {
+    top: 0px;
+    right: 10px;
+  }
 
   main {
     gap: 50px;
@@ -302,12 +324,14 @@ section {
 
   .header {
     min-block-size: 668px;
+    max-block-size: 100vh;
     padding: 0px 10px;
+    width: 100%;
   }
 
   .section {
-    grid-template-columns: repeat(3, 1fr);
-    max-inline-size: 100%;
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .page {
@@ -321,25 +345,27 @@ section {
 
   .section-title {
     grid-column: 1 / -1;
+    inline-size: 90%;
   }
 
   .section.alter .section-title {
-    inline-size: 100%;
+    inline-size: 95%;
   }
 
   .section .section__content {
     grid-column: 1 / -1;
+    width: 100%;
   }
 
   .section.pictures {
     grid-template-columns: 1fr;
-    gap:10px;
+    gap: 10px;
+    width: 100%;
   }
 
   .section__picture-wide {
     grid-column: auto;
   }
-
 
   .header::after, 
   .footer::after {
@@ -354,6 +380,8 @@ section {
   }
 
   .footer {
-      min-block-size: 668px;
+    min-block-size: 668px;
+    max-block-size: 100vh;
+    width: 100%;
   }
 }
