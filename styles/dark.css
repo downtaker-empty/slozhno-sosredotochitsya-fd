@@ -32,18 +32,8 @@ html.theme-dark .rec-badge {
   }
 
   .rec-badge {
-  position: absolute;
-  font-size: 18px;
-  color: var(--color-accent);
-  align-self: self-start;
-  justify-self: center;
-  margin-right: 30px;
-  display: block;
+    display: block;
   }
 
-  .rec-badge::after {
-  content: '•';
-  font-size: 1.8em;
-  line-height: 1;
-  }
+
 }

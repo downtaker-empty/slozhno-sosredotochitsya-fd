@@ -1,18 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-
-
-.page {
-  background-image: var(--bg-image);
-  background-color: var(--bg-color);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  display: grid;
-  grid-template-rows: repeat(auto-fit, 1fr);
-  gap: 60px;
-  position: relative;
-  max-inline-size: 1024px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 a {
@@ -32,6 +23,21 @@ a:focus-visible {
   border: 1px solid var(--color-text);
 }
 
+.page {
+  background-image: var(--bg-image);
+  background-color: var(--bg-color);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  gap: 60px;
+  position: relative;
+  max-inline-size: 1024px;
+  margin: 0 auto;
+  padding: 0px 20px 0px 20px;
+  inline-size: 100%;
+}
 
 .decorated-zone::after,
 .decorated-zone::before,
@@ -46,7 +52,7 @@ a:focus-visible {
 .decorated-zone::after, 
 .footer::after {
   top: 20px;
-  right: 20px;
+  right: 0px;
   border-top: 1px solid var(--color-title);
   border-right: 1px solid var(--color-title);
 }
@@ -54,7 +60,7 @@ a:focus-visible {
 .decorated-zone::before, 
 .footer::before {
   bottom: 20px;
-  left: 20px;
+  left: 0px;
   border-bottom: 1px solid var(--color-title);
   border-left: 1px solid var(--color-title);
 }
@@ -66,7 +72,7 @@ a:focus-visible {
   font-family: var(--font-family-text);
   align-self: start;
   justify-self: end;
-  top: 20px;
+  top: 10px;
   right: 0px;
   display: none;
 }
@@ -80,10 +86,10 @@ a:focus-visible {
 .header {
   position: relative;
   display: grid;
-  grid-template-rows:  auto min-content auto;
+  grid-template-rows: auto min-content auto;
   min-block-size: 768px;
   max-block-size: 100vh;
-  padding: 20px 20px 0px 0px;
+  padding: 20px 20px 0 0;
 }
 
 .header__theme-menu {
@@ -120,7 +126,6 @@ a:focus-visible {
   border-bottom: 1px solid var(--color-title);
 }
 
-
 .header__theme-menu-button_active {
   border: 1px solid var(--color-title);
 }
@@ -131,7 +136,7 @@ a:focus-visible {
   font-size: var(--fs-title);
   font-weight: 700;
   line-height: 83%;
-  color:var(--color-primary);
+  color: var(--color-primary);
   text-shadow: 4px 4px var(--color-accent);
   font-family: var(--font-family-text);
   align-items: center;
@@ -155,11 +160,12 @@ a:focus-visible {
 main {
   display: flex;
   flex-direction: column;
-  gap:80px;
-  padding: 0px 20px;
+  gap: 80px;
+  padding: 0;
+  width: 100%;
 }
 
-section {
+.section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -197,6 +203,7 @@ section {
   text-align: left;
   white-space: normal;
   word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .section__content-text {
@@ -207,6 +214,7 @@ section {
   line-height: 23.4px;
   text-align: left;
   text-wrap: wrap;
+  overflow-wrap: break-word;
 }
 
 .section__content-title + .section__content-text {
@@ -229,7 +237,7 @@ section {
 }
 
 .section__picture {
-  object-fit:contain;
+  object-fit: contain;
 }
 
 .section.pictures .section__content {
@@ -262,7 +270,11 @@ section {
   position: relative;
 }
 
-@media (width<=768px) {
+@media (max-width: 768px) {
+  .page {
+    padding: 0 10px;
+    gap: 40px;
+  }
 
   .header {
     min-block-size: 1024px;
@@ -272,18 +284,38 @@ section {
     justify-self: end;
     align-self: center;
   }
-  
+
   .header__theme-menu-list {
     flex-direction: column;
   }
 
   .section {
-    grid-template-columns: 236px repeat(2, 226px);
+    grid-template-columns: 1fr;
   }
 
+  .section-title {
+    grid-row: auto;
+    grid-column: 1 / -1;
+  }
+
+  .section__content {
+    grid-column: 1 / -1;
+  }
+
+  .section.alter .section-title {
+    inline-size: 100%;
+  }
 
   .section.alter .section__content {
     grid-column: 1 / -1;
+  }
+
+  .section.pictures {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section__picture-wide {
+    grid-column: span 1;
   }
 
   .footer {
@@ -291,38 +323,38 @@ section {
   }
 }
 
-@media (width <= 375px) {
+@media (max-width: 375px) {
 
-  main {
-    gap: 50px;
-    padding: 0px 10px;
-  }
-
-  .header {
-    min-block-size: 668px;
-    padding: 0px 10px;
-  }
-
-  .section {
-    grid-template-columns: repeat(3, 1fr);
-    max-inline-size: 355px;
+  .rec-badge {
+    top: 0px;
   }
 
   .page {
-    gap: 40px;
+    gap: 30px;
+  }
+
+  .header {
+    padding: 10px 0 0 0;
+    min-block-size: 668px;
   }
 
   .header-text {
-    padding-left: 10px;
+    padding-left: 0;
     inline-size: 100%;
+    font-size: calc(var(--fs-text) * 0.9);
+  }
+
+  main {
+    gap: 50px;
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   .section-title {
     grid-column: 1 / -1;
-  }
-
-  .section.alter .section-title {
-    inline-size: 100%;
   }
 
   .section .section__content {
@@ -331,27 +363,29 @@ section {
 
   .section.pictures {
     grid-template-columns: 1fr;
-    gap:10px;
+    gap: 10px;
   }
 
-  .section__picture-wide {
+  .section__picture-wide,
+  .section__picture-tall,
+  .section__picture-tall-xl {
     grid-column: auto;
+    grid-row: auto;
   }
-
 
   .header::after, 
   .footer::after {
     top: 10px;
-    right: 10px;
+    right: 0px;
   }
 
   .header::before, 
   .footer::before {
-    left: 10px;
+    left: 0px;
     bottom: 10px;
   }
 
   .footer {
-      min-block-size: 668px;
+    min-block-size: 668px;
   }
 }
