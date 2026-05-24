@@ -52,7 +52,7 @@ a:focus-visible {
 .decorated-zone::after, 
 .footer::after {
   top: 20px;
-  right: 0px;
+  right: 20px;
   border-top: 1px solid var(--color-title);
   border-right: 1px solid var(--color-title);
 }
@@ -60,7 +60,7 @@ a:focus-visible {
 .decorated-zone::before, 
 .footer::before {
   bottom: 20px;
-  left: 0px;
+  left: 20px;
   border-bottom: 1px solid var(--color-title);
   border-left: 1px solid var(--color-title);
 }
@@ -73,7 +73,7 @@ a:focus-visible {
   align-self: start;
   justify-self: end;
   top: 10px;
-  right: 0px;
+  right: 20px;
   display: none;
 }
 
@@ -171,6 +171,7 @@ main {
   gap: 20px;
   align-items: start;
   grid-auto-rows: auto;
+  box-sizing: border-box;
 }
 
 .section-title {
@@ -180,6 +181,7 @@ main {
   font-size: var(--fs-text);
   font-weight: 700;
   line-height: 23.4px;
+  box-sizing: border-box;
 }
 
 .section.alter .section-title {
@@ -190,6 +192,7 @@ main {
 .section__content {
   grid-column: 2 / 4;
   align-self: start;
+  box-sizing: border-box;
 }
 
 .section.alter .section__content {
@@ -289,19 +292,6 @@ main {
     flex-direction: column;
   }
 
-  .section {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    grid-row: auto;
-    grid-column: 1 / -1;
-  }
-
-  .section__content {
-    grid-column: 1 / -1;
-  }
-
   .section.alter .section-title {
     inline-size: 100%;
   }
@@ -326,6 +316,7 @@ main {
 @media (max-width: 375px) {
 
   .rec-badge {
+    right: 0px;
     top: 0px;
   }
 
