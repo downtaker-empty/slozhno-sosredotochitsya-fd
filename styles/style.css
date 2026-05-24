@@ -295,7 +295,7 @@ section {
 
   .section.alter .section-title {
     grid-column: 1 / -1;
-    inline-size: 100%;
+    inline-size: 30%;
   }
 
   .section.alter .section__content {
