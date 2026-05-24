@@ -344,10 +344,11 @@ section {
 
   .section-title {
     grid-column: 1 / -1;
+    inline-size: 90%;
   }
 
   .section.alter .section-title {
-   inline-size: 100%;
+   inline-size: 90%;
   }
 
   .section .section__content {
