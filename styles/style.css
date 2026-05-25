@@ -1,65 +1,91 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 .page {
+  display: flex;
+  flex-direction: column;
+  gap:60px;
   background-image: var(--bg-image);
+  background-position: center;      
+  background-size: cover;           
+  background-attachment: fixed;       
   background-color: var(--bg-color);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  display: grid;
-  grid-template-rows: repeat(auto-fit, 1fr);
-  gap: 60px;
   position: relative;
   max-inline-size: 1024px;
-  width: 100%;
-  margin: 0 auto;
+  border: 1px solid white;
 }
 
-a {
-  text-shadow: 2px 2px var(--color-accent);
-  cursor: pointer;
+@media (max-width: 375px) {
+  .page {
+    gap: 40px;
+  }
 }
 
-a:hover {
-  border-bottom: 1px solid var(--color-text);
+.header {
+  position: relative;
+  inline-size: 100%;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto min-content auto;
+  min-block-size: 768px;
+  max-block-size: 100vh;
+  padding: 20px 20px 0px 0px;
+  border: 1px solid red;
 }
 
-a:focus {
-  outline: none;
+@media (max-width: 768px){
+  
+  .header {
+    min-block-size: 1024px;
+  }
 }
 
-a:focus-visible {
-  border: 1px solid var(--color-text);
+@media (max-width: 375px){
+  .header {
+    min-block-size: 668px;
+    padding: 10px;
+  }
 }
 
-.decorated-zone::after,
-.decorated-zone::before,
+/*Настройка углов и REC*/
 .footer::after,
-.footer::before {
+.footer::before,
+.decorated-zone::after,
+.decorated-zone::before {
   content: '';
   position: absolute;
   width: 25px;
   height: 25px;
 }
 
-.decorated-zone::after, 
-.footer::after {
+.footer::after,
+.decorated-zone::after {
   top: 20px;
   right: 20px;
   border-top: 1px solid var(--color-title);
   border-right: 1px solid var(--color-title);
 }
 
-.decorated-zone::before, 
-.footer::before {
+.footer::before,
+.decorated-zone::before {
   bottom: 20px;
   left: 20px;
   border-bottom: 1px solid var(--color-title);
   border-left: 1px solid var(--color-title);
+}
+
+@media (max-width: 375px){
+
+  .footer::after,
+  .decorated-zone::after{
+    top: 10px;
+    right: 10px;
+  }
+  
+  .footer::before,
+  .decorated-zone::before{
+    bottom: 10px;
+    left: 10px;
+  }
 }
 
 .rec-badge {
@@ -69,26 +95,27 @@ a:focus-visible {
   font-family: var(--font-family-text);
   align-self: start;
   justify-self: end;
-  top: 10px;
-  right: 20px;
-  display: none;
+  top: 20px;
+  right: 25px;
 }
 
 .rec-badge::after {
-  content: '•';
-  font-size: 1.8em;
+  margin-left: 5px;
+  content: '⬤';
+  border-radius: 50%;
   line-height: 1;
 }
 
-.header {
-  position: relative;
-  display: grid;
-  grid-template-rows: auto min-content auto;
-  min-block-size: 768px;
-  max-block-size: 100vh;
-  padding: 20px 20px 0px 0px;
-  width: 100%;
+@media (max-width:375px) {
+  
+  .rec-badge {
+    top: 10px;
+    right: 15px;
+  }
+
 }
+
+/*Настройка кнопок*/
 
 .header__theme-menu {
   align-self: self-start;
@@ -100,6 +127,19 @@ a:focus-visible {
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+
+@media (max-width: 768px){
+
+  .header__theme-menu {
+    align-self: center;
+    justify-self:end;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+
 }
 
 .header__theme-menu-button {
@@ -124,21 +164,23 @@ a:focus-visible {
   border-bottom: 1px solid var(--color-title);
 }
 
-
 .header__theme-menu-button_active {
   border: 1px solid var(--color-title);
 }
 
+/*Настройка титульного текста*/
+
 .header-title {
+  max-inline-size: 100%;
+  inline-size: auto;
   align-self: center;
   justify-self: start;
   font-size: var(--fs-title);
   font-weight: 700;
   line-height: 83%;
-  color: var(--color-primary);
+  color:var(--color-primary);
   text-shadow: 4px 4px var(--color-accent);
   font-family: var(--font-family-text);
-  align-items: center;
 }
 
 .header-text {
@@ -149,24 +191,49 @@ a:focus-visible {
   font-family: var(--font-family-text);
   font-weight: 700;
   line-height: 23.4px;
+  
 }
+
+@media (max-width:375px) {
+  
+  .header-text{
+    inline-size: 98%;
+    justify-self: start;
+  }
+
+}
+
+/*Общие стили*/
 
 .accent-block {
   background-color: var(--color-accent);
   color: var(--color-argc);
 }
 
+/* Main */
+
 main {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap:80px;
   padding: 0px 20px;
 }
+
+@media (max-width:375px) {
+
+  main{
+    gap:50px;
+    padding: 0px 10px;
+  }
+
+}
+
+/*Настройка секций*/
 
 section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap:20px;
   align-items: start;
   grid-auto-rows: auto;
 }
@@ -178,7 +245,14 @@ section {
   font-size: var(--fs-text);
   font-weight: 700;
   line-height: 23.4px;
-  text-align: left;
+}
+
+@media (max-width:375px) {
+
+  .section-title {
+    grid-column: 1 / -1;
+  }
+
 }
 
 .section.alter .section-title {
@@ -186,19 +260,45 @@ section {
   inline-size: 30%;
 }
 
+@media (max-width:375px) {
+
+  .section.alter .section-title {
+    inline-size: 100%;
+  }
+
+}
+
 .section__content {
   grid-column: 2 / 4;
   align-self: start;
+}
+
+@media (max-width:375px) {
+
+  .section .section__content {
+    grid-column: 1 / -1;
+  }
+
 }
 
 .section.alter .section__content {
   grid-column: auto;
 }
 
+@media (max-width:768px) {
+
+  .section.alter .section__content {
+    grid-column: 1 / -1;
+  }
+
+}
+
 .section__content-title {
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
   font-weight: 700;
+  text-align: left;
+  white-space: normal;
 }
 
 .section__content-text {
@@ -208,6 +308,7 @@ section {
   font-weight: 400;
   line-height: 23.4px;
   text-align: left;
+  white-space: normal;
   text-wrap: wrap;
 }
 
@@ -215,13 +316,23 @@ section {
   margin-top: 10px;
 }
 
-.title-bold {
-  font-weight: 700 !important;
-}
-
 .tips .section__content-title {
   font-weight: 400;
 }
+
+.tips .section__content.section__content-title {
+  font-weight: 700;
+}
+
+@media (max-width:768px) {
+
+  .tips .section__content-text {
+    inline-size: 99%;
+  }
+  
+}
+
+/*Pictures*/
 
 .section.pictures {
   grid-template-columns: repeat(3, 1fr);
@@ -235,7 +346,7 @@ section {
 }
 
 .section__picture {
-  object-fit: contain;
+  object-fit:contain;
 }
 
 .section.pictures .section__content {
@@ -258,6 +369,21 @@ section {
   grid-row: span 3;
 }
 
+@media (max-width:375px) {
+  
+  .section.pictures {
+    grid-template-columns: 1fr;
+    gap:10px;
+  }
+
+  .section__picture-wide {
+    grid-column: auto;
+  }
+
+}
+
+/* Footer */
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -266,121 +392,17 @@ section {
   min-block-size: 768px;
   max-block-size: 100vh;
   position: relative;
-  width: 100%;
 }
 
-@media (width <= 768px) {
-
-  .header {
-    min-block-size: 1024px;
-    max-block-size: 100vh;
-    padding: 20px 10px 0 10px;
-    width: 100%;
-  }
-
-  .header__theme-menu {
-    justify-self: end;
-    align-self: center;
-  }
-  
-  .header__theme-menu-list {
-    flex-direction: column;
-  }
-
-  .section {
-    grid-template-columns: 1.05fr 1fr 1fr;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .section.alter .section-title {
-    grid-column: 1 / -1;
-    inline-size: 30%;
-  }
-
-  .section.alter .section__content {
-    grid-column: 1 / -1;
-  }
-
+@media (max-width: 768px){
   .footer {
     min-block-size: 1024px;
-    max-block-size: 100vh;
-    padding: 20px;
-    width: 100%;
   }
 }
 
-@media (width <= 375px) {
-
-  .rec-badge {
-    top: 0px;
-    right: 10px;
-  }
-
-  main {
-    gap: 50px;
-    padding: 0px 10px;
-  }
-
-  .header {
-    min-block-size: 668px;
-    max-block-size: 100vh;
-    width: 100%;
-  }
-
-  .section {
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-  }
-
-  .page {
-    gap: 40px;
-  }
-
-  .header-text {
-    padding-left: 10px;
-    inline-size: 100%;
-  }
-
-  .section-title {
-    grid-column: 1 / -1;
-    inline-size: 90%;
-  }
-
-  .section.alter .section-title {
-   inline-size: 90%;
-  }
-
-  .section .section__content {
-    grid-column: 1 / -1;
-    width: 100%;
-  }
-
-  .section.pictures {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .section__picture-wide {
-    grid-column: auto;
-  }
-
-  .header::after, 
-  .footer::after {
-    top: 10px;
-    right: 10px;
-  }
-
-  .header::before, 
-  .footer::before {
-    left: 10px;
-    bottom: 10px;
-  }
-
+@media (max-width: 375px){
   .footer {
     min-block-size: 668px;
-    max-block-size: 100vh;
-    width: 100%;
   }
 }
+
