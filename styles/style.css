@@ -24,7 +24,7 @@
   inline-size: 100%;
   display:grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto min-content auto;
+  grid-template-rows: 1fr min-content 1fr;
   min-block-size: 768px;
   max-block-size: 100vh;
 }
@@ -195,7 +195,6 @@
   color:var(--color-primary);
   text-shadow: 4px 4px var(--color-accent);
   font-family: var(--font-family-text);
-  margin-top: 20px;
 }
 
 .header-text {
