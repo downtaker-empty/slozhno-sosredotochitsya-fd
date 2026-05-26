@@ -131,7 +131,7 @@
   .header__theme-menu {
     align-self: center;
     justify-self:end;
-    margin-top: 0px;
+    margin-top: 20px;
     margin-right: 20px;
   }
 
@@ -143,13 +143,14 @@
 
 .header__theme-menu-button {
   background: initial;
-  border: initial;
+  border: none;
   color: var(--color-title);
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
   line-height: 18px;
   padding: 1.5px 13px;
   cursor: pointer;
+  border: 1px solid initial;
 }
 
 .header__theme-menu-button:hover {
@@ -185,7 +186,7 @@
 }
 
 .header-text {
-  inline-size: 49%;
+  inline-size: 48%;
   align-self: center;
   justify-self: end;
   font-size: var(--fs-text);
