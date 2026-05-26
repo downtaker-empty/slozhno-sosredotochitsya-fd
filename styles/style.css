@@ -147,6 +147,7 @@
   color: var(--color-title);
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
+  line-height: 18px;
   padding: 1.5px 13px;
   cursor: pointer;
 }
@@ -184,7 +185,7 @@
 }
 
 .header-text {
-  inline-size: 50%;
+  inline-size: 49%;
   align-self: center;
   justify-self: end;
   font-size: var(--fs-text);
