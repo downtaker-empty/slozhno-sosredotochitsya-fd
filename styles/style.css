@@ -144,6 +144,16 @@
 
 }
 
+@media (max-width: 500px) {
+
+  .header__theme-menu {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+}
+
+
 .header__theme-menu-button {
   background: initial;
   border: none;
