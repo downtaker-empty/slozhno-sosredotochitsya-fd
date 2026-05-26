@@ -150,7 +150,6 @@
   line-height: 18px;
   padding: 1.5px 13px;
   cursor: pointer;
-  border: 1px solid initial;
 }
 
 .header__theme-menu-button:hover {
