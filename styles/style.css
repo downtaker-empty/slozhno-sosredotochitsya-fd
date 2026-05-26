@@ -27,7 +27,6 @@
   grid-template-rows: auto min-content auto;
   min-block-size: 768px;
   max-block-size: 100vh;
-  padding: 20px 20px 0px 0px;
 }
 
 @media (max-width: 768px) {
@@ -117,6 +116,7 @@
 .header__theme-menu {
   align-self: self-start;
   justify-self: center;
+  margin-top: 20px;
 }
 
 .header__theme-menu-list {
@@ -189,7 +189,7 @@
   font-family: var(--font-family-text);
   font-weight: 700;
   line-height: 23.4px;
-  
+  margin-right: 20px;
 }
 
 @media (max-width: 500px) {
