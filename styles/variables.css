@@ -8,9 +8,10 @@
   --font-family-text: "IBM Plex Mono", "JetBrains Mono", monospace;
 }
 
-@media (width<=375) {
+@media (max-width: 375px) {
 
   :root {
     --fs-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
+
 }
