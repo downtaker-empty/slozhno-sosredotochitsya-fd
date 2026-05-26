@@ -117,6 +117,7 @@
 /*Настройка кнопок*/
 
 .header__theme-menu {
+  margin-left: 20px;
   align-self: self-start;
   justify-self: center;
 }
@@ -185,14 +186,13 @@
 }
 
 .header-text {
-  inline-size: 48%;
+  inline-size: 49%;
   align-self: center;
   justify-self: end;
   font-size: var(--fs-text);
   font-family: var(--font-family-text);
   font-weight: 700;
   line-height: 23.4px;
-  margin-right: 20px;
 }
 
 @media (max-width: 500px) {
