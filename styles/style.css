@@ -190,7 +190,7 @@ a:focus-visible {
 
 /*Настройка титульного текста*/
 
-.header-title {
+.title {
   max-inline-size: 100%;
   inline-size: auto;
   align-self: center;
@@ -199,8 +199,11 @@ a:focus-visible {
   font-weight: 700;
   line-height: 83%;
   color:var(--color-primary);
-  text-shadow: 4px 4px var(--color-accent);
   font-family: var(--font-family-text);
+}
+
+.header-title {
+  text-shadow: 4px 4px var(--color-accent);
 }
 
 .header-text {
@@ -414,16 +417,7 @@ main {
 }
 
 .footer-title {
-  max-inline-size: 100%;
-  inline-size: auto;
-  align-self: center;
-  justify-self: start;
-  font-size: var(--fs-title);
-  font-weight: 700;
-  line-height: 83%;
-  color:var(--color-primary);
   text-shadow: 2px 2px var(--color-accent);
-  font-family: var(--font-family-text);
 }
 
 @media (max-width: 768px) {
