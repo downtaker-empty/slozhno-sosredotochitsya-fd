@@ -417,7 +417,7 @@ main {
 }
 
 .footer-title {
-  text-shadow: 2px 2px var(--color-accent);
+  text-shadow: 2px 2px var(--color-shadow-footer);
 }
 
 @media (max-width: 768px) {

@@ -13,6 +13,7 @@
   --color-hover: #32312D66;
   --bg-image: url('../images/cover-image-light.png');
   --bg-color: #FFF1F7;
+  --color-shadow-footer: #FF0070;
 }
 
 html.theme-light .rec-badge {
@@ -31,6 +32,7 @@ html.theme-light .rec-badge {
   --color-hover: #32312D66;
   --bg-image: url('../images/cover-image-light.png');
   --bg-color: #FFF1F7;
+  --color-shadow-footer: #FF0070;
 }
 
   .rec-badge {
