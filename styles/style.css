@@ -13,6 +13,24 @@
   max-inline-size: 1024px;
 }
 
+a {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--color-title);
+  cursor: pointer;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--color-text);
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  border: 1px solid var(--color-text);
+}
+
 @media (max-width: 500px) {
   .page {
     gap: 40px;
@@ -172,7 +190,7 @@
 
 /*Настройка титульного текста*/
 
-.title {
+.header-title {
   max-inline-size: 100%;
   inline-size: auto;
   align-self: center;
@@ -393,6 +411,19 @@ main {
   min-block-size: 768px;
   max-block-size: 100vh;
   position: relative;
+}
+
+.footer-title {
+  max-inline-size: 100%;
+  inline-size: auto;
+  align-self: center;
+  justify-self: start;
+  font-size: var(--fs-title);
+  font-weight: 700;
+  line-height: 83%;
+  color:var(--color-primary);
+  text-shadow: 2px 2px var(--color-accent);
+  font-family: var(--font-family-text);
 }
 
 @media (max-width: 768px) {
